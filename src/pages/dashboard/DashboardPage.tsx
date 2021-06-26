@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactElement } from 'react';
 import BaseTable from '../../components/BaseTable';
 import InvoiceDTO from '../../DTO/InvoiceDTO';
 
@@ -6,7 +6,7 @@ interface DashboardProps {
   invoices: InvoiceDTO[];
 }
 
-const DashboardPage: FC<DashboardProps> = ({ invoices }) => {
+const DashboardPage: FC<DashboardProps> = ({ invoices }): ReactElement => {
   const columns = React.useMemo(
     () => [
       {

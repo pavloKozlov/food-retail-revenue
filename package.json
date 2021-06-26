@@ -7,8 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "server": "json-server -p 3001 --fks _id --snapshots ./server/dbs  -d 200 --routes ./server/routes.json --read-only --watch server/generator.js",
-    "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "format": "prettier --write 'src/**/*.ts{,x}'",
+    "lint": "tsc --noEmit && eslint 'src/**/*.ts{,x}'",
     "stylelint": "stylelint '**/*.scss'"
   },
   "dependencies": {
