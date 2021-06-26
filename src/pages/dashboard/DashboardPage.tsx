@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react';
-import BaseTable from '../../components/BaseTable';
+import InvoicesTable from '../../components/InvoicesTable';
 import InvoiceDTO from '../../DTO/InvoiceDTO';
 
 interface DashboardProps {
@@ -7,35 +7,10 @@ interface DashboardProps {
 }
 
 const DashboardPage: FC<DashboardProps> = ({ invoices }): ReactElement => {
-  const columns = React.useMemo(
-    () => [
-      {
-        Header: 'ID',
-        accessor: 'id',
-      },
-      {
-        Header: 'Date',
-        accessor: 'date',
-      },
-      {
-        Header: 'Customer Name',
-        accessor: 'customer_name',
-      },
-      {
-        Header: 'Region',
-        accessor: 'region',
-      },
-      {
-        Header: 'Total',
-        accessor: 'total_invoice',
-      },
-    ],
-    []
-  );
   return (
     <div>
       dashboard page
-      <BaseTable columns={columns} data={invoices} />
+      <InvoicesTable data={invoices} />
     </div>
   );
 };

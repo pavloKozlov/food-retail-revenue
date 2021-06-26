@@ -1,7 +1,8 @@
 {
   "*.js": [
     "yarn lint --fix",
-    "yarn format"
+    "yarn format",
+    "git add"
   ],
   "*.{json,md,yml}": [
     "yarn format"
