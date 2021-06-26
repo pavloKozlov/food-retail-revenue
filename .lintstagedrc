@@ -1,0 +1,13 @@
+{
+  "*.js": [
+    "yarn lint --fix",
+    "yarn format"
+  ],
+  "*.{json,md,yml}": [
+    "yarn format"
+  ],
+  "**/*.scss": [
+    "stylefmt",
+    "stylelint '**/*.scss' --fix",
+  ]
+}

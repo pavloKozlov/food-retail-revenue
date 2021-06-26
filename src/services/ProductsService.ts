@@ -12,7 +12,7 @@ class ProductsService extends BaseService {
   /**
    * Gets list of all available products.
    * id parameter is optional, if not specified, all the products will be retrieved.
-   * 
+   *
    * @param id - The product id.
    * @returns The list of products.
    */

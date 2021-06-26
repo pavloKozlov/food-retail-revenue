@@ -12,7 +12,7 @@ class InvoicesService extends BaseService {
   /**
    * Gets list of all company invoices + content (invoices lines).
    * id parameter is optional, if not specified, all the products will be retrieved.
-   * 
+   *
    * @param id - The invoice id.
    * @returns The list of company invoices.
    */

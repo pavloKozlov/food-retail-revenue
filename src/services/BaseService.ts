@@ -14,12 +14,13 @@ abstract class BaseService {
 
   /**
    * Sends get API request.
-   * 
+   *
    * @param url - url string starting after base url.
    * @returns The promise that resolves with <T> type.
    */
   protected get<T>(url: string): Promise<T> {
-    return axios.get(`${BASE_URL}${this.subRoute}${url}`)
+    return axios
+      .get(`${BASE_URL}${this.subRoute}${url}`)
       .then((response) => response.data);
   }
 }

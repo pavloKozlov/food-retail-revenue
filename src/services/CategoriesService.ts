@@ -11,7 +11,7 @@ class CategoriesService extends BaseService {
 
   /**
    * Gets the products categories, and the total amount of revenues and margin they generated.
-   * 
+   *
    * @returns The list of products categories.
    */
   public getCategoriesRevenues(): Promise<CategoryDTO[]> {

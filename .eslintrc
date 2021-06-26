@@ -1,0 +1,82 @@
+{
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint", "jest"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "comma-dangle": [0, "never"],
+    "prefer-destructuring": 0,
+    "no-shadow": 0,
+    "no-tabs": 0,
+    "class-methods-use-this": 0,
+    "no-extra-boolean-cast": [
+      2,
+      {
+        "enforceForLogicalOperands": true
+      }
+    ],
+    "padded-blocks": 0,
+    "no-restricted-syntax": [2, "LabeledStatement", "WithStatement"],
+    "no-unused-vars": [
+      2,
+      {
+        "vars": "all",
+        "args": "none"
+      }
+    ],
+    "no-plusplus": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    "react/jsx-first-prop-new-line": [0, "multiline"],
+    "react/jsx-props-no-spreading": 0,
+    "react/require-default-props": 0,
+    "react/prefer-stateless-function": 0,
+    "react/forbid-prop-types": 0,
+    "react/prop-types": [
+      2,
+      {
+        "ignore": ["children"]
+      }
+    ],
+    "linebreak-style": 1,
+    "no-debugger": 1,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "react-hooks/rules-of-hooks": 2,
+    "import/no-extraneous-dependencies": [
+      2,
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.spec.js",
+          "./config/**"
+        ]
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "prettier/prettier": [2],
+    "radix": 0,
+    "curly": 2
+  }
+}

@@ -13,7 +13,7 @@ class CustomersService extends BaseService {
   /**
    * Gets list of all company customers.
    * id parameter is optional, if not specified, all the products will be retrieved
-   * 
+   *
    * @param id - The customer id.
    * @returns The list of customers.
    */
@@ -24,7 +24,7 @@ class CustomersService extends BaseService {
 
   /**
    * Gets the customers list, with the total revenue, margin and invoices count they generated.
-   * 
+   *
    * @returns The list of Customer revenues
    */
   public getCustomersRevenues(): Promise<CustomerRevenueDTO[]> {
