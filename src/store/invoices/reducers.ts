@@ -1,6 +1,7 @@
 import { AnyAction } from 'redux';
 import InvoiceDTO from '../../DTO/InvoiceDTO';
 import { SET_INVOICES } from './actionTypes';
+import { sortByDateFunc } from './invoiceUtils';
 
 interface IInvoicesReducer {
   data: InvoiceDTO[];
@@ -18,7 +19,7 @@ const reducers = (
     case SET_INVOICES:
       return {
         ...state,
-        data: action.payload as InvoiceDTO[],
+        data: (action.payload as InvoiceDTO[]).sort(sortByDateFunc),
       };
     default:
   }

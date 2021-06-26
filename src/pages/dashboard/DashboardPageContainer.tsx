@@ -5,7 +5,10 @@ import { RootState } from '../../store/store';
 import DashboardPage from './DashboardPage';
 
 const DashboardPageContainer = () => {
-  const invoices = useSelector((state: RootState) => state.invoices.data);
+  const invoices = useSelector((state: RootState) => state.invoices.data).slice(
+    0,
+    15
+  );
 
   const dispatch = useDispatch();
 
