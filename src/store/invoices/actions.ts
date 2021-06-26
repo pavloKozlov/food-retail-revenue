@@ -1,5 +1,5 @@
 import { AnyAction } from 'redux';
-import InvoiceService from '../../services/InvoiceService';
+import invoiceService from '../../services/InvoiceService';
 import { SET_INVOICES } from './actionTypes';
 import InvoiceDTO from '../../DTO/InvoiceDTO';
 import { ReduxThunkAction, AppDispatch } from '../store';
@@ -12,7 +12,7 @@ const setInvoicesResult = (invoices: InvoiceDTO[]): AnyAction => ({
 export const fetchInvoices =
   (): ReduxThunkAction =>
   (dispatch: AppDispatch): void => {
-    InvoiceService.getInvoices().then((data) =>
-      dispatch(setInvoicesResult(data))
-    );
+    invoiceService
+      .getInvoices()
+      .then((data) => dispatch(setInvoicesResult(data)));
   };

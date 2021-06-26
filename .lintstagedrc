@@ -1,5 +1,5 @@
 {
-  "*.js": [
+  "*.{js,ts,tsx}": [
     "yarn lint --fix",
     "yarn format",
     "git add"
