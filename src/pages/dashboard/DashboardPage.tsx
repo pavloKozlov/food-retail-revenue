@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC } from 'react';
 import BaseTable from '../../components/BaseTable';
 import InvoiceDTO from '../../DTO/InvoiceDTO';
-import invoiceService from '../../services/InvoiceService';
 
-const DashboardPage = () => {
-  const [invoices, setInvoices] = useState<InvoiceDTO[]>([]);
+interface DashboardProps {
+  invoices: InvoiceDTO[];
+}
 
-  useEffect(() => {
-    invoiceService.getInvoices().then((data) => setInvoices(data));
-  }, []);
-
+const DashboardPage: FC<DashboardProps> = ({ invoices }) => {
   const columns = React.useMemo(
     () => [
       {

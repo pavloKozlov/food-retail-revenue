@@ -54,12 +54,7 @@
     "react/require-default-props": 0,
     "react/prefer-stateless-function": 0,
     "react/forbid-prop-types": 0,
-    "react/prop-types": [
-      2,
-      {
-        "ignore": ["children"]
-      }
-    ],
+    "react/prop-types": 0,
     "linebreak-style": 1,
     "no-debugger": 1,
     "jsx-a11y/click-events-have-key-events": 0,

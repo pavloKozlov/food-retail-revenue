@@ -11,6 +11,7 @@
     "scss/at-import-partial-extension-blacklist": null,
     "scss/at-import-partial-extension-whitelist": ["scss"],
     "scss/selector-no-redundant-nesting-selector": null,
-    "max-nesting-depth": 2,
+    "max-nesting-depth": null,
+    "selector-max-compound-selectors": null
   }
 }
